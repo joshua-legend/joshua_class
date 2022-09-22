@@ -1,16 +1,22 @@
 import React, {PropsWithChildren} from "react";
-import {Header, Main} from "@/layouts/mainspace/styles";
-import SearchBar from "@/components/SearchBar";
+import {Main} from "@/layouts/mainspace/styles";
+import SearchBar from "@/components/Input/SearchBar";
+import Header from "@/layouts/mainspace/components/Header";
+import Footer from "@/layouts/mainspace/components/Footer";
+import Navbar from "@/layouts/mainspace/components/Navbar";
 
 
 const MainSpace: React.FC<PropsWithChildren> = ({children}) => {
     return (
-        <Main>
-            <Header>조슈아 클래스</Header>
-            <SearchBar />
-            {children}
-
-        </Main>
+        <>
+            <Main>
+                <Header/>
+                <SearchBar/>
+                {children}
+                <Footer/>
+                <Navbar/>
+            </Main>
+        </>
     );
 }
 

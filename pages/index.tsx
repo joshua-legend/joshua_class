@@ -1,19 +1,39 @@
-import type { NextPage } from 'next'
+import type {NextPage} from 'next'
 import MainSpace from "@/layouts/mainspace";
 import FrameSpace from "@/layouts/framespace";
-import SliderBanner from "@/components/SliderBanner";
-import Container from "@/components/Container";
+import ScrollView from "@/components/Layout/ScrollView";
+import Container from "@/components/Layout/Container";
+import {useState} from "react";
+import IContainer from "@/components/Layout/Container/interface";
+import IScrollView from "@/components/Layout/ScrollView/interface";
+import cards from "@/constants/Cards/Cards";
+import Banner from "@/constants/Banners";
+import icons from "@/constants/Icons/Icons";
 
 
 const Home: NextPage = () => {
-  return (
-    <FrameSpace>
-        <MainSpace>
-            <SliderBanner />
-            <Container />
-        </MainSpace>
-    </FrameSpace>
-  )
+
+    const [banner, setBanner] = useState<IScrollView>({
+        swiperProps: {slidesPerView:1,spaceBetween: 50,height:240, loop: true},
+        contents: {value: Banner, header: undefined}
+    });
+    const [icon, setIcon] = useState<IContainer>({
+        contents: {header: "관심 있는 기술 스택을 선택하세요", value: icons},
+        gridRC: {rowNumber: 3, columnNumber: 4}
+    });
+    const [tech, setTech] = useState<IContainer>({
+        contents: {header: "관심 있는 직군을 선택하세요", value: cards},
+        gridRC: {rowNumber: 2, columnNumber: 2},
+    });
+    return (
+        <FrameSpace>
+            <MainSpace>
+                <ScrollView swiperProps={{...banner.swiperProps}} contents={{...banner.contents}}/>
+                <Container contents={{...icon.contents}} gridRC={{...icon.gridRC}}/>
+                <Container contents={{...tech.contents}} gridRC={{...tech.gridRC}}/>
+            </MainSpace>
+        </FrameSpace>
+    )
 }
 
 export default Home

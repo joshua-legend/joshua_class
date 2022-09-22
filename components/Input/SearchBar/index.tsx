@@ -1,5 +1,5 @@
 import React from "react";
-import {Searchbar} from "@/components/SearchBar/styles";
+import {Searchbar} from "@/components/Input/SearchBar/styles";
 import {FiSearch} from "react-icons/fi";
 
 
