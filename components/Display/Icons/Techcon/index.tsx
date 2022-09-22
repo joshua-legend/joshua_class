@@ -1,5 +1,5 @@
 import React from "react";
-import {TechconIcon, TechconLayout, TechconName} from "@/components/Display/Techcon/styles";
+import {TechconIcon, TechconLayout, TechconName} from "@/components/Display/Icons/Techcon/styles";
 import {JSX} from "@babel/types";
 
 export interface ITechcon {

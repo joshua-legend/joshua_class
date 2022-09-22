@@ -11,8 +11,8 @@ const cards = () => {
     ]
     return(
       <>
-          {cardValues.map((cardValue, id)=>{
-              return <Card key={id} imageUrl={cardValue.imageUrl} hashTags={cardValue.hashTags} />
+          {cardValues.map((card, id)=>{
+              return <Card key={id} {...card} />
           })}
       </>
     );

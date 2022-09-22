@@ -4,7 +4,7 @@ import {AiOutlineLaptop} from "react-icons/ai";
 import {SiCss3, SiGit, SiGooglechrome, SiHtml5, SiJavascript, SiNodedotjs, SiPython, SiReact, SiTypescript} from "react-icons/si";
 import {BiNetworkChart} from "react-icons/bi";
 import {TbBrandNextjs} from "react-icons/tb";
-import Techcon, {ITechcon} from "@/components/Display/Techcon";
+import Techcon, {ITechcon} from "@/components/Display/Icons/Techcon";
 
 
 const icons: () => JSX.Element[] = () => {
@@ -23,7 +23,7 @@ const icons: () => JSX.Element[] = () => {
         {techIcon: <TbBrandNextjs color="#333A54" size={45}/>, name: "Next.js"},
     ]
     return techIcons.map((icon, id) => {
-        return (<Techcon key={id} techIcon={icon.techIcon} name={icon.name} />)
+        return (<Techcon key={id} {...icon} />)
     })
 }
 

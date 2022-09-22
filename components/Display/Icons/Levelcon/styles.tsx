@@ -1,14 +1,15 @@
 import styled from '@emotion/styled';
 
-export const Wrapper = styled.ul`
-  display: inline-flex;
-  list-style: none;
-`
-export const Tooltip = styled.span`
+
+interface ITooltip {
+    color?:string,
+}
+
+export const LevelTooltip = styled.span<ITooltip>`
   position: absolute;
   top: 10px;
   font-size: 14px;
-  background: #1877F2;
+  background: #${props => props.color};
   color: #ffffff;
   padding: 5px 8px;
   border-radius: 5px;
@@ -21,7 +22,7 @@ export const Tooltip = styled.span`
     content: "";
     height: 8px;
     width: 8px;
-    background: #1877F2;
+    background: ${props => props.color};
     bottom: -3px;
     left: 50%;
     transform: translate(-50%) rotate(45deg);
@@ -29,7 +30,7 @@ export const Tooltip = styled.span`
   }
 `
 
-export const Icon = styled.li`
+export const LevelIcon = styled.li<ITooltip>`
   position: relative;
   background: #ffffff;
   border-radius: 50%;
@@ -45,6 +46,9 @@ export const Icon = styled.li`
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  :hover{
+    background: #${props => props.color};
+  }
   &:hover span{
     top: -45px;
     opacity: 1;

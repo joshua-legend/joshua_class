@@ -16,8 +16,7 @@ export const TechconLayout = styled.li`
   }
 `
 
-export const TechconIcon = styled.svg`
-
+export const TechconIcon = styled.div`
 `
 
 export const TechconName = styled.span`
