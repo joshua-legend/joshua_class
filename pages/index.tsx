@@ -10,15 +10,11 @@ import cards from "@/constants/Cards/cards";
 import icons from "@/constants/Icons/icons";
 import {AiOutlineHome} from "react-icons/ai";
 import banners from "@/constants/Banners/banners";
-import {BANNER_SWIPER} from "@/constants/Banners/bannerData";
 
 
 const Home: NextPage = () => {
 
-    const [banner, setBanner] = useState<IScrollView>({
-        swiperProps: {...BANNER_SWIPER},
-        contents: {value:banners}
-    });
+    const [banner, setBanner] = useState<IScrollView>({...banners()});
 
     const [icon, setIcon] = useState<IContainer>({
         contents: {header: "관심 있는 기술 스택을 선택하세요", bread: [{icon: <AiOutlineHome/>, name: "home"}], value: icons},

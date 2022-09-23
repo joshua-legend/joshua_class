@@ -1,16 +1,14 @@
-export interface ISwiperProps {
-    height:number,
-    slidesPerView:number,
-    spaceBetween:number,
-    loop?:boolean,
+interface ISwiperProps {
+    height: number,
+    slidesPerView: number,
+    spaceBetween: number,
+    loop?: boolean,
 }
-
-export interface IContents{
+interface IContents {
     header?: string,
-    value:()=>JSX.Element[] | JSX.Element,
+    value: JSX.Element[],
 }
-
 export default interface IScrollView {
-    swiperProps:ISwiperProps,
-    contents:IContents,
+    swiperProps: ISwiperProps,
+    contents: IContents,
 }
