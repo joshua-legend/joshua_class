@@ -16,7 +16,7 @@ const ScrollView = ({swiperProps,contents}: IScrollView) => {
                 loop={swiperProps.loop}
                 modules={[Navigation]}
             >
-                {contents.value()}
+                {contents.value}
             </Swiper>
         </SwiperWrapper>
     );

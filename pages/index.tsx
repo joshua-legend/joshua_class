@@ -8,28 +8,20 @@ import IContainer from "@/components/Layout/Container/interface";
 import IScrollView from "@/components/Layout/ScrollView/interface";
 import cards from "@/constants/Cards/cards";
 import icons from "@/constants/Icons/icons";
-import {AiOutlineHome} from "react-icons/ai";
 import banners from "@/constants/Banners/banners";
 
 
 const Home: NextPage = () => {
 
     const [banner, setBanner] = useState<IScrollView>({...banners()});
-
-    const [icon, setIcon] = useState<IContainer>({
-        contents: {header: "관심 있는 기술 스택을 선택하세요", bread: [{icon: <AiOutlineHome/>, name: "home"}], value: icons},
-        gridRC: {rowNumber: 3, columnNumber: 3}
-    });
-
-    const [tech, setTech] = useState<IContainer>({
-        contents: {header: "관심 있는 직군을 선택하세요", value: cards},
-        gridRC: {rowNumber: 2, columnNumber: 2},
-    });
+    const [icon, setIcon] = useState<IContainer>({...icons()});
+    const [tech, setTech] = useState<IContainer>({...cards()});
     return (
         <FrameSpace>
             <MainSpace>
-                <ScrollView swiperProps={{...banner.swiperProps}} contents={{...banner.contents}}/>
-                <Container contents={{...icon.contents}} gridRC={{...icon.gridRC}}/>
+                {/*<ScrollView swiperProps={{...banner.swiperProps}} contents={{...banner.contents}}/>*/}
+                <ScrollView {...banner}/>
+                <Container {...icon}/>
                 {/*<Container contents={{...tech.contents}} gridRC={{...tech.gridRC}}/>*/}
             </MainSpace>
         </FrameSpace>

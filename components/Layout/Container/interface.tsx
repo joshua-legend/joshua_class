@@ -4,7 +4,7 @@ export default interface IContainer {
     contents:{
         header?: string,
         bread?: IBread[],
-        value:()=>JSX.Element[] | JSX.Element,
+        value:JSX.Element[],
     },
     gridRC:{
         rowNumber: number,

@@ -9,7 +9,7 @@ const Container: React.FC<IContainer> = ({contents,gridRC}) => {
             {contents.header ?  <Header>{contents.header}</Header> : undefined}
             <BreadCrumb Breads={contents.bread} />
             <GridSection rowNumber={gridRC.rowNumber} columnNumber={gridRC.columnNumber} >
-                {contents.value()}
+                {contents.value}
             </GridSection>
         </ContainerSection>
     );
