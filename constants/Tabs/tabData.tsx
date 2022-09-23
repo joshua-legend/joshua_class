@@ -5,7 +5,7 @@ const Tab = styled.div`
       font-size: 12px;
       white-space: nowrap;
     `
-const TAB_DATA:any[] = [
+const TAB_DATA:JSX.Element[] = [
     <Tab>전체</Tab>,
     <Tab>웹 퍼블리싱</Tab>,
     <Tab>자바스크립트</Tab>,
