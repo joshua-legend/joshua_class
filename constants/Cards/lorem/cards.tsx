@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Card from "@/components/Display/Card";
-import CARD_DATA from "@/constants/Cards/cardData";
+import CARD_DATA from "@/constants/Cards/lorem/cardData";
 import IContainer from "@/components/Layout/Container/interface";
 const cards = ():IContainer => {
     const [cardsList, setCardList] = useState(CARD_DATA)

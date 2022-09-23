@@ -8,7 +8,7 @@ import Tabs from "@/constants/Tabs/tabs";
 import Container from "@/components/Layout/Container";
 import IContainer from "@/components/Layout/Container/interface";
 import levels from "@/constants/Levels/levels";
-import cards from "@/constants/Cards/cards";
+import cards from "@/constants/Cards/lorem/cards";
 
 const Articles: NextPage = () => {
 

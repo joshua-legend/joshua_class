@@ -6,15 +6,15 @@ import Container from "@/components/Layout/Container";
 import {useState} from "react";
 import IContainer from "@/components/Layout/Container/interface";
 import IScrollView from "@/components/Layout/ScrollView/interface";
-import cards from "@/constants/Cards/cards";
-import icons from "@/constants/Icons/icons";
-import banners from "@/constants/Banners/banners";
+import cards from "@/constants/Cards/lorem/cards";
+import largeCategoryIcons from "@/constants/Icons/largeCategory/largeCategoryIcons";
+import promotionBanner from "@/constants/Banners/promotion/promotionBanner";
 
 
 const Home: NextPage = () => {
 
-    const [banner, setBanner] = useState<IScrollView>({...banners()});
-    const [icon, setIcon] = useState<IContainer>({...icons()});
+    const [banner, setBanner] = useState<IScrollView>({...promotionBanner()});
+    const [icon, setIcon] = useState<IContainer>({...largeCategoryIcons()});
     const [tech, setTech] = useState<IContainer>({...cards()});
     return (
         <FrameSpace>
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
                 {/*<ScrollView swiperProps={{...banner.swiperProps}} contents={{...banner.contents}}/>*/}
                 <ScrollView {...banner}/>
                 <Container {...icon}/>
-                {/*<Container contents={{...tech.contents}} gridRC={{...tech.gridRC}}/>*/}
+                <Container {...tech}/>
             </MainSpace>
         </FrameSpace>
     )
