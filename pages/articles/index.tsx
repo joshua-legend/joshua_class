@@ -4,11 +4,11 @@ import FrameSpace from "@/layouts/framespace";
 import {useState} from "react";
 import ScrollView from "@/components/Layout/ScrollView";
 import IScrollView from "@/components/Layout/ScrollView/interface";
-import Tabs from "@/constants/Tabs";
+import Tabs from "@/constants/Tabs/tabs";
 import Container from "@/components/Layout/Container";
 import IContainer from "@/components/Layout/Container/interface";
-import levels from "@/constants/Levels/Levels";
-import cards from "@/constants/Cards/Cards";
+import levels from "@/constants/Levels/levels";
+import cards from "@/constants/Cards/cards";
 
 const Articles: NextPage = () => {
 

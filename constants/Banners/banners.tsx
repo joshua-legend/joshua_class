@@ -1,15 +1,11 @@
 import {JSX} from "@babel/types";
 import React from "react";
 import {SwiperSlide} from "swiper/react";
+import {BANNER_DATA} from "@/constants/Banners/bannerData";
+
 
 const banners: () => JSX.Element[] = () => {
-    const bannerArray = [
-        <img src="/images/code.jpg" alt=""/>,
-        <img src="/images/code.jpg" alt=""/>,
-        <img src="/images/code.jpg" alt=""/>,
-        <img src="/images/code.jpg" alt=""/>,
-    ]
-    return bannerArray.map((banner,id)=>{
+    return BANNER_DATA.map((banner,id)=>{
         return (
             <SwiperSlide key={id}>
                 {banner}

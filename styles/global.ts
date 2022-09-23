@@ -20,6 +20,10 @@ export const global = css`
   ul{
     list-style-type: none;
   }
+  ol{
+    list-style-type: none;
+    padding:0
+  }
   
   input::-ms-clear,
   input::-ms-reveal {

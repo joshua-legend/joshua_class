@@ -9,12 +9,10 @@ export interface ILevelcon {
 }
 
 const Levelcon = ({toolTip, icon, color, isPressed}: ILevelcon) => {
-
     const [isPress, setIsPress] = useState(isPressed)
     const onClickButton = () =>{
         setIsPress(!isPress)
     }
-
     return (
         <LevelIcon onClick={onClickButton} color={isPress ? color : "white"}>
             <LevelTooltip color={isPress ? color : "white"}>{toolTip}</LevelTooltip>
