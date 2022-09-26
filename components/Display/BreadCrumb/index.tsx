@@ -2,8 +2,8 @@ import React from "react";
 import {BreadCrumbBox, BreadCrumbContainer, BreadCrumbLayout} from "@/components/Display/BreadCrumb/styles";
 
 export interface IBread {
-    icon:JSX.Element,
-    name:string,
+    icon?:JSX.Element,
+    name?:string,
 }
 interface IBreadCrumb {
     Breads?: IBread[];

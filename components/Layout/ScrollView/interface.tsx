@@ -6,7 +6,7 @@ interface ISwiperProps {
 }
 interface IContents {
     header?: string,
-    value: JSX.Element[],
+    value:()=>JSX.Element[],
 }
 export default interface IScrollView {
     swiperProps: ISwiperProps,

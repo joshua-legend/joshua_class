@@ -16,13 +16,13 @@ const Articles: NextPage = () => {
         contents: {value: levels},
         gridRC: {rowNumber: 1, columnNumber: 5}
     });
-    const [tabs, setTabs] = useState<IScrollView>({
-        swiperProps: {slidesPerView: 4, spaceBetween: 70, height: 94},
-        contents: {value: Tabs, header: undefined}
-    });
     const [tech, setTech] = useState<IContainer>({
         contents: {header: "관심 있는 직군을 선택하세요", value: cards},
         gridRC: {rowNumber: 2, columnNumber: 2},
+    });
+    const [tabs, setTabs] = useState<IScrollView>({
+        swiperProps: {slidesPerView: 4, spaceBetween: 70, height: 94},
+        contents: {value: Tabs, header: undefined}
     });
 
     return (
